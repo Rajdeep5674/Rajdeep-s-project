@@ -4,6 +4,7 @@
 </div>
 <div *ngIf="active_session">
     <button class="btn btn-primary" type="submit" (click)=logout()>Logout</button>
+    <app-message-page></app-message-page>
 </div>
 <div *ngIf="loginForm">
   <div class="form-group container bg-light p-2">
