@@ -1,3 +1,30 @@
-<p>
-create-user-page works!
-</p>
+  <div class="form-group container bg-light p2">
+  <h1>Please Fill Your Details Here</h1>
+    <label>Full Name</label>
+      <input #full_name type="text" class="form-control" placeholder="Rajdeep Bhadra" required><br>
+
+      <label>Full Address  </label>
+      <input #full_address type="password" class="form-control" placeholder="your full address"><br>
+
+      <label>Date Of Birth  </label>
+      <input #dob type="date" class="form-control" placeholder=""><br>
+
+      <label>Phone Number  </label>
+      <input #phone_number type="text" class="form-control" placeholder="your contact number"><br>
+
+      <label>Set Your Username </label>
+      <input #username type="text" class="form-control" placeholder="set your username for future login"><br>
+
+      <label>Set Your Password </label>
+      <input #password1 type="password" class="form-control" placeholder="set your password"><br>
+
+      <label>Confirm Password </label>
+      <input #password2 type="password" class="form-control"placeholder="re-enter the password"><br>
+
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit" (click)=fireEvent() routerLink="/">Cancel </button> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+
+        <button class="btn btn-primary" type="submit" (click)=submit(full_name,full_address,dob,phone_number,username,password1,password2)>Submit</button>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
