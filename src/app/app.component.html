@@ -6,21 +6,29 @@
 <div class="container" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: 100% 100%; background-position: center center;">
 
 <div  class="container p-3 my-3">
-        <button class="btn btn-primary" type="submit" routerLink="/">Home</button>&nbsp;<br><br>
+        <button class="btn btn-primary" type="submit" routerLink="/" (click)=home()>Home</button>&nbsp;<br><br>
   <h1 class="text-center"> Welcome to my website</h1>
 </div>
 <div  class="container p-3 my-3">
 
-  <div *ngIf="default">
+  <div *ngIf="message">
 
-      <button class="btn btn-primary" type="submit" routerLink="/home" (click)=ExistingUser()>Existing User ? Login here.</button>&nbsp;<br><br>
+    <button class="btn btn-primary" type="submit" (click)=ExistingUser()>Existing User ? Login here.</button>&nbsp;<br><br>
 
-      <button class="btn btn-primary" type="submit" routerLink="/SuccessfulLogin">New User? Create your account here.</button>&nbsp;
+    <button class="btn btn-primary" type="submit" (click)=newUser()>New User? Create your account here.</button>&nbsp; 
 
-      <router-outlet></router-outlet>
+  </div>
+  <div *ngIf="!message">
+    <div [ngSwitch]="choice">
+      <div *ngSwitchCase="'new'">
+        <app-create-user-page (childEvent)="message=$event"></app-create-user-page>
+      </div>
+      <div *ngSwitchCase="'existing'">
+        <app-homepage (childEvent)="message=$event"></app-homepage>
+      </div>
+    </div>
   </div>
 </div>
-
 </div>
 </body>
 </html>
