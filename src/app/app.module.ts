@@ -8,9 +8,14 @@ import { HelloComponent } from './hello.component';
 
 import { AppRoutingModule } from './approuting.module';
 
+import { HomepageComponent } from './homepage/homepage.component';
+import { SuccessfulLoginComponent } from './successful-login/successful-login.component';
+import { MessagePageComponent } from './message-page/message-page.component';
+import { CreateUserPageComponent } from './create-user-page/create-user-page.component';
+
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [  HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
