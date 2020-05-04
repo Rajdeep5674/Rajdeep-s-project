@@ -13,7 +13,8 @@ private phone_number;
 private username;
 private password1;
 private password2;
-
+public message_class="";
+public message="";
 @Output()
 public childEvent=new EventEmitter();
 
@@ -25,10 +26,14 @@ public childEvent=new EventEmitter();
   this.username=username;
   this.password1=password1;
   this.password2=password2;
+  this.message_class="alert alert-success";
+  this.message="Your details have been saved successfully.";
   }
   fireEvent()
   {
     this.childEvent.emit(true);
+    this.message_class="alert alert-warning";
+    this.message="Form closed.";
   }
   close()
   {
