@@ -14,8 +14,10 @@ import { MessagePageComponent } from './message-page/message-page.component';
 import { CreateUserPageComponent } from './create-user-page/create-user-page.component';
 import { GetBasicDetailsService } from './message-page/get-basic-details.service';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, RouterModule,AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, RouterModule,AppRoutingModule,HttpClientModule ],
   declarations: [  HelloComponent ],
   bootstrap:    [ AppComponent ],
   providers: [GetBasicDetailsService]

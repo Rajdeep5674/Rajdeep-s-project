@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GetBasicDetailsService} from './get-basic-details.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-message-page',
@@ -48,7 +49,7 @@ contactUs()
   constructor(public _GetBasicDetailsService:GetBasicDetailsService) { }
 
   ngOnInit() {
-    this.customerDetails=this._GetBasicDetailsService.getBasicDetails();
+    this._GetBasicDetailsService.getBasicDetails().subscribe(data=>this.customerDetails=data);
   }
 
 }

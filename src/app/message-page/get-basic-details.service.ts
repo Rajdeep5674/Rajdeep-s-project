@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
+import {HttpClient,HttpHeaders} from '@angular/common/http';
+import {ICustomer} from './icustomer';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class GetBasicDetailsService {
-  getBasicDetails()
+  public _url:string="./customerDetails.json"
+  getBasicDetails():Observable<ICustomer[]>
   {
-    return[
-      {"name":"Rajdeep Bhadra","address":"vanasthalipuram hyderabad","DOB":"05-11-1994","phone":"9051853822","username":"Rajdeep123"}
-    ];
+    return this.http.get<ICustomer[]>(this._url,{responseType: 'j'});
   }
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
 }
