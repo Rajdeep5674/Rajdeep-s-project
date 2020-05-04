@@ -33,7 +33,15 @@ more()
 }
 update()
 {
-  this.message="All updates related to this website will be displ here.";
+  this.message="All updates related to this website will be displayed here.";
+}
+help()
+{
+  this.message="Help section will be added soon";
+}
+contactUs()
+{
+  this.message="Contact section will be added soon";
 }
   constructor() { }
 
