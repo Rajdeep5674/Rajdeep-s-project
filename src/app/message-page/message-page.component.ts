@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GetBasicDetailsService} from './get-basic-details.service';
 
 @Component({
   selector: 'app-message-page',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagePageComponent implements OnInit {
 public message="";
+public customerDetails=[];
 viewBasicDetails()
 {
   this.message="View Basic Details";
@@ -43,9 +45,10 @@ contactUs()
 {
   this.message="Contact section will be added soon";
 }
-  constructor() { }
+  constructor(public _GetBasicDetailsService:GetBasicDetailsService) { }
 
   ngOnInit() {
+    this.customerDetails=this._GetBasicDetailsService.getBasicDetails();
   }
 
 }

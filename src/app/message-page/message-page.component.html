@@ -33,6 +33,28 @@
   <div class="col-sm-7 border bg-light" id="viewSection">
     <div class="container border p-1 my-1">
       <p>{{message}}</p>
+      <!--table for displaying basic details of customer-->
+      <div class="container">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Full name</th>
+        <th>Date of Birth</th>
+        <th>Phone number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customerDetails">
+        <td>{{customer.name}}</td>
+        <td>{{customer.DOB}}</td>
+        <td>{{customer.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--table end-->
     </div>
    </div>
   <div class="col-sm-2 border bg-light" id="viewSection">
