@@ -19,9 +19,9 @@ public childEvent=new EventEmitter();
 
 submit(username,password)
 {
-  if(username=="1196291" && password=="R@jdeep123")
+  if(username=="" && password=="")
   {
-    this.message="Login successful";
+    this.message="Welcome Rajdeep";
     this.loginForm=false;
     this.message_class="alert alert-success";
     this.active_session=true;
