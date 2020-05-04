@@ -1,30 +1,32 @@
-  <div class="form-group container bg-light p2">
+      <div [class]="message_class">
+      <p>{{message}}</p>
+      </div>
+  <div class="form-group container bg-light p2 was-validated">
   <h1>Please Fill Your Details Here</h1>
     <label>Full Name</label>
       <input #full_name type="text" class="form-control" placeholder="Rajdeep Bhadra" required><br>
 
       <label>Full Address  </label>
-      <input #full_address type="password" class="form-control" placeholder="your full address"><br>
+      <input #full_address type="text" class="form-control" placeholder="your full address" required><br>
 
       <label>Date Of Birth  </label>
-      <input #dob type="date" class="form-control" placeholder=""><br>
+      <input #dob type="date" class="form-control" placeholder="" required><br>
 
       <label>Phone Number  </label>
-      <input #phone_number type="text" class="form-control" placeholder="your contact number"><br>
+      <input #phone_number type="text" class="form-control" placeholder="your contact number" required><br>
 
       <label>Set Your Username </label>
-      <input #username type="text" class="form-control" placeholder="set your username for future login"><br>
+      <input #username type="text" class="form-control" placeholder="set your username for future login" required><br>
 
       <label>Set Your Password </label>
-      <input #password1 type="password" class="form-control" placeholder="set your password"><br>
+      <input #password1 type="password" class="form-control" placeholder="set your password" required><br>
 
       <label>Confirm Password </label>
-      <input #password2 type="password" class="form-control"placeholder="re-enter the password"><br>
+      <input #password2 type="password" class="form-control"placeholder="re-enter the password" required><br>
 
     <div class="text-center">
-        <button class="btn btn-primary" type="submit" (click)=fireEvent() routerLink="/">Cancel </button> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+        <button class="btn btn-primary" type="submit" (click)=fireEvent() >Cancel </button> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
 
         <button class="btn btn-primary" type="submit" (click)=submit(full_name,full_address,dob,phone_number,username,password1,password2)>Submit</button>
     </div>
-    <router-outlet></router-outlet>
-  </div>
+    </div>
