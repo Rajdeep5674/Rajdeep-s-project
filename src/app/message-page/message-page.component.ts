@@ -29,7 +29,7 @@ pinChange()
 }
 more()
 {
-  this.message="Many more to come";
+  this.message="Many more to come...";
 }
   constructor() { }
 

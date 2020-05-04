@@ -5,25 +5,25 @@
         <!-- Links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)=viewBasicDetails()>View Basic Details</a>
+            <a class="nav-link" href="#viewSection" (click)=viewBasicDetails()>View Basic Details</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)=checkAccountBalance()>Account Balance</a>
+            <a class="nav-link" href="#viewSection" (click)=checkAccountBalance()>Account Balance</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)=fundTransfer()>Fund Transfer</a>
+            <a class="nav-link" href="#viewSection" (click)=fundTransfer()>Fund Transfer</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link" href="#" (click)=editBasicDeatils()>Edit Basic Details</a>
+            <a class="nav-link" href="#viewSection" (click)=editBasicDeatils()>Edit Basic Details</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link" href="#" (click)=pinChange()>Pin Change</a>
+            <a class="nav-link" href="#viewSection" (click)=pinChange()>Pin Change</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link" href="#" (click)=more()>More</a>
+            <a class="nav-link" href="#viewSection" (click)=more()>More</a>
           </li>
         </ul>
     </nav>
   </div>
-  <div class="col-sm-9 border bg-light"> <p>{{message}}</p></div>
+  <div class="col-sm-9 border bg-light" id="viewSection"> <p>{{message}}</p></div>
 </div>
