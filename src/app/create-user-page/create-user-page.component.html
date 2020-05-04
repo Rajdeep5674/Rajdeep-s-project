@@ -1,7 +1,7 @@
-      <div [class]="message_class">
+    <div [class]="message_class" id="msg">
       <p>{{message}}</p>
-      </div>
-  <div class="form-group container bg-light p2 was-validated">
+    </div> 
+<div class="form-group container bg-light p2 was-validated">
   <h1>Please Fill Your Details Here</h1>
     <label>Full Name</label>
       <input #full_name type="text" class="form-control" placeholder="Rajdeep Bhadra" required><br>
@@ -27,6 +27,8 @@
     <div class="text-center">
         <button class="btn btn-primary" type="submit" (click)=fireEvent() >Cancel </button> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
 
-        <button class="btn btn-primary" type="submit" (click)=submit(full_name,full_address,dob,phone_number,username,password1,password2)>Submit</button>
+        <a href="#msg">
+        <button class="btn btn-primary" type="submit" (click)=submit(full_name,full_address,dob,phone_number,username,password1,password2)>Submit</button></a>
     </div>
-    </div>
+</div>
+
