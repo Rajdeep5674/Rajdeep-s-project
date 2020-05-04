@@ -8,7 +8,7 @@ export class GetBasicDetailsService {
   public _url:string="./customerDetails.json"
   getBasicDetails():Observable<ICustomer[]>
   {
-    return this.http.get<ICustomer[]>(this._url,{responseType: 'j'});
+    return this.http.get<ICustomer[]>(this._url,{responseType: 'json'});
   }
   constructor(private http:HttpClient) { }
 

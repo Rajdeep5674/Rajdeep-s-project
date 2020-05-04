@@ -49,7 +49,7 @@ contactUs()
   constructor(public _GetBasicDetailsService:GetBasicDetailsService) { }
 
   ngOnInit() {
-    this._GetBasicDetailsService.getBasicDetails().subscribe(data=>this.customerDetails=data);
+    this._GetBasicDetailsService.getBasicDetails().subscribe(data => this.customerDetails =data);
   }
 
 }
