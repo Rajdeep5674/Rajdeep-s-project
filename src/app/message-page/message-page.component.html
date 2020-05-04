@@ -35,27 +35,29 @@
       <p>{{message}}</p>
       <!--table for displaying basic details of customer-->
       <h2>Your Basic details</h2>
-      <p>To edit your basic details please click to edit basic details</p>            
-          <table class="table table-striped border">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Date of Birth</th>
-                <th>Phone number</th>
-                <th>Your Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let customer of customerDetails">
-                <td>{{customer.name}}</td>
-                <td>{{customer.address}}</td>
-                <td>{{customer.DOB}}</td>
-                <td>{{customer.phone}}</td>
-                <td>{{customer.username}}</td>
-              </tr>
-            </tbody>
-          </table>
+      <p>To edit your basic details please click to edit basic details</p>
+          <div class="table-responsive">
+              <table class="table table-striped border">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Date of Birth</th>
+                    <th>Phone number</th>
+                    <th>Your Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let customer of customerDetails">
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.address}}</td>
+                    <td>{{customer.DOB}}</td>
+                    <td>{{customer.phone}}</td>
+                    <td>{{customer.username}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
           <!--table end-->
     </div>
   </div>
