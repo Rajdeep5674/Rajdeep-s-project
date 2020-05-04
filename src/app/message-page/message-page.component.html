@@ -1,9 +1,14 @@
-<h1>your home page is coming soon...</h1>
+<div class="container text-center bg-light p-1 my-1">
+  <h1>your home page is coming soon...</h1>
+</div>
 <div class="row">
   <div class="col-sm-3 border bg-light">
     <nav class="navbar bg-light">
         <!-- Links -->
-        <ul class="navbar-nav">
+        <ul class="navbar-nav text-center p-1 my-1 border">
+          <li class="nav-item">
+            <a class="nav-link text-center border">Menu</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#viewSection" (click)=viewBasicDetails()>View Basic Details</a>
           </li>
@@ -20,10 +25,23 @@
             <a class="nav-link" href="#viewSection" (click)=pinChange()>Pin Change</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link" href="#viewSection" (click)=more()>More</a>
+            <a class="nav-link" href="#viewSection" (click)=more()>More..</a>
           </li>
         </ul>
     </nav>
   </div>
-  <div class="col-sm-9 border bg-light" id="viewSection"> <p>{{message}}</p></div>
+  <div class="col-sm-7 border bg-light" id="viewSection">
+    <div class="container border p-1 my-1">
+      <p>{{message}}</p>
+    </div>
+   </div>
+  <div class="col-sm-2 border bg-light" id="viewSection">
+    <div class="container border p-1 my-1">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link text-center border text-auto" href="#viewSection" (click)=update()>Updates</a>
+          </li>
+        </ul>
+    </div>
+   </div>
 </div>

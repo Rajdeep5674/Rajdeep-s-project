@@ -31,6 +31,10 @@ more()
 {
   this.message="Many more to come...";
 }
+update()
+{
+  this.message="All updates related to this website will be displ here.";
+}
   constructor() { }
 
   ngOnInit() {
